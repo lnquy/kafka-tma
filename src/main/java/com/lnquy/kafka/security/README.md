@@ -1,5 +1,5 @@
 # Kafka Security (SSL & SASL)
-No code change must me made to enable these security features on Kafka brokers, Kafka clients and Zookeeper but you must confgigure everything correctly to make it work :)
+No code change must me made to enable these security features on Kafka brokers, Kafka clients and Zookeeper but you must configure everything correctly to make it work :)
 Please take a look on some notes below as well as read the Kafka/Confluent documentation for security carefully.
 
 ##### KafkaSSL
@@ -17,7 +17,7 @@ Please take a look on some notes below as well as read the Kafka/Confluent docum
      P/s: All commands is on RHEL 7, it may differ on other OS.
 
      ```shell
-     $ # yum list | grep krb5
+     $ yum list | grep krb5
      krb5-libs.x86_64                        1.15.1-18.el7              @/krb5-libs-1.15.1-18.el7.x86_64
      krb5-workstation.x86_64                 1.15.1-18.el7              @/krb5-workstation-1.15.1-18.el7.x86_64
 
