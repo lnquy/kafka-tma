@@ -13,10 +13,11 @@ Source code is written in Java and built with Gradle.
 ```
 $ cd /path/to/src
 $ gradle init   // Install dependencies
-$ gradle kafka<demoName>   // Run specific demo
+$ gradle <taskName>   // Run specific demo
 // Available demos are:
 // - kafkaBareProducer
 // - kafkaBareConsumer
+// - kafkaBareConsumer2
 // - kafkaStreams
 
 // Kafka Connect code is not runable.
@@ -31,6 +32,9 @@ $ gradle kafka<demoName>   // Run specific demo
   `KAFKA_BOOTSTRAP_SERVERS` is a list of addresses to Kafka brokers, separated by comma.
   `KAFKA_TOPIC` is your topic name.
 - Producer send a message to topic every second. Consumer consumes messages from Kafka topic and prints it to stdout.
+- Start `kafkaBareProducer` first, then start one of these cases below to see the difference behaviour of consumer group.  
+  - Broadcast model: Run a `kafkaBareConsumer` process and a `kafkaBareConsumer2` process.
+  - LoadBalancing model: Run 2 `kafkaBareConsumer` processes.
 
 ##### KafkaConnect
 
